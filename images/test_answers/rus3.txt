@@ -1,0 +1,18 @@
+Tesseract:
+
+Tesseract advance:
+PaddleOCR cyr:
+
+двА
+
+PaddleOCR en:
+
+ABA
+
+EasyOCR
+
+ДВл
+
+EasyOCR (paragraph mode)
+
+ДВл
