@@ -47,15 +47,6 @@ def image2text(image_path: str, model: easyocr.easyocr.Reader, norm_text: bool =
 
 
 if "__main__" == __name__:
-    reader = setup_ocr(True)
-    image2text('images/test_images/rus1.png', reader[1])
-    image2text('images/test_images/eng_rus.png', reader[2], norm_text=False)
-
-    # image2text('images/test_images/rus1.png', reader[1])
-    # image2text('images/test_images/rus2.png', reader[1])
-    # image2text('images/test_images/rus3.png', reader[1])
-    # image2text('images/test_images/rus3_hard.png', reader[1])
-    # image2text('images/test_images/eng1.png', reader[0])
-    # image2text('images/test_images/eng_rus.png', reader[2])
-    # image2text('images/test_images/eng_rus2.png', reader[2])
-    # image2text('images/test_images/rus1.png', reader[1])
+    reader = setup_ocr(gpu_enabled=True) # [en moodel, ru model, ru+en model]
+    print(image2text('images/test_images/rus1.png', reader[1]))
+    print(image2text('images/test_images/eng_rus.png', reader[2], norm_text=False))
