@@ -8,15 +8,16 @@ https://www.jaided.ai/easyocr/
 
 ### Локально
 ```bash
-pip install easyocr, memory_profiler
+pip install easyocr
 python ocr.py
 ```
 
-Чтобы переключится c gpu на cpu, нужно убрать аргумент у функции `setup_ocr`:
+- Языки можно использовать один или комбинировать
+- Чтобы переключится c gpu на cpu, нужно убрать аргумент у функции `setup_ocr`:
 ```python
 if "__main__" == __name__:
-    reader = setup_ocr() # CPU
-    reader = setup_ocr(gpu_enabled=True) # GPU
+    reader = setup_ocr(['en']) # CPU, english lang
+    reader = setup_ocr(['en', 'ru'], gpu_enabled=True) # GPU, english and russian lang at same time
 ```
 
 ## RAM:
